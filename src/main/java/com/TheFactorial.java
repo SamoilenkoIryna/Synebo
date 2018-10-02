@@ -12,7 +12,7 @@ public class TheFactorial {
         Scanner scanner = new Scanner(System.in);
         String string = scanner.nextLine();
 
-        string = qwerty(scanner, string);
+        string = check(scanner, string);
         int factorial = Integer.parseInt(string);
         int counter = 1;
 
@@ -26,14 +26,14 @@ public class TheFactorial {
                 System.out.println("Error. Enter new number");
                 counter=1;
                 string = scanner.nextLine();
-                string = qwerty(scanner, string);
+                string = check(scanner, string);
                 factorial = Integer.parseInt(string);
             }
         }
         System.out.println("Reverse factorial value is " + counter);
     }
 
-    private static String qwerty(Scanner scanner, String string) {
+    private static String check(Scanner scanner, String string) {
         while (!Matches.isNumber(string)) {
             System.out.println("Enter the correct factorial value");
             string = scanner.nextLine();
